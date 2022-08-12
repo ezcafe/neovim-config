@@ -1,42 +1,74 @@
+-- https://neovim.io/doc/user/options.html#options
+
+-- local backup_dir = vim.fn.stdpath('data').."/.cache"
+
 local options = {
-	g = {
-		mapleader = " ", -- set leader key
-	},
-	opt = {
-		-- General
-	  mouse = 'a', -- Enable mouse support
-	  timeoutlen = 300, -- Length of time to wait for a mapped sequence
-	  updatetime = 300, -- Length of time to wait before triggering the plugin
+    g = {
+        mapleader = " ", -- set leader key
 
-	  -- Neovim UI
-    cursorline = true, -- Highlight the text line of the cursor
-    fillchars = { eob = " " }, -- Disable `~` on nonexistent lines
-    number = true, -- Show line number
-    showmatch = true, -- Highlight matching parenthesis
-    signcolumn = "yes", -- Always show the sign column
-    termguicolors = true, -- Enable 24-bit RGB colors
+        -- Explorer
+        netrw_banner = 0, -- Hide the banner
+        -- netrw_browse_split = 3, -- Open file in tab
+        netrw_liststyle = 3, -- Set tree view
+        netrw_winsize = 30, -- Change the size of the Netrw window to 30%
 
-    -- Tabs, indent
-    copyindent = true, -- Copy the previous indentation on autoindenting
-    expandtab = true, -- Use spaces instead of tabs
-    preserveindent = true, -- Preserve indent structure as much as possible
-    shiftwidth = 2, -- Shift 2 spaces when tab
-    smartindent = true, -- Autoindent new lines
-    tabstop = 2, -- 1 tab == 2 spaces
+        -- end g
+    },
+    opt = {
+        -- General
+        errorbells = true,
+		mouse = 'a', -- Enable mouse support for all modes
+		-- shada = "'100,<50,f50,n"..backup_dir.."/shada/shada",
+        timeoutlen = 300, -- Time in milliseconds to wait for a mapped sequence to complete.
+        updatetime = 300, -- Length of time to wait before triggering the plugin
+		visualbell = true,
 
-    -- Memory, CPU
-    history = 100, -- Remember N lines in history
-    lazyredraw = true, -- Faster scrolling
-    synmaxcol = 240, -- Max column for syntax highlight
+        -- Neovim UI
+        -- colorcolumn = '80',
+        cursorline = true, -- Highlight the text line of the cursor
+        --fillchars = { eob = " " }, -- Disable `~` on nonexistent lines
+        number = true, -- Show line number
+        showmatch = true, -- Highlight matching parenthesis
+        signcolumn = 'yes', -- Always show the sign column
+        splitbelow = true, -- Horizontal split to the bottom
+        splitright = true, -- Vertical split to the right
+        syntax = 'on', -- Allow syntax highlighting
+        termguicolors = true, -- Enable 24-bit RGB colors
 
-  }
+        -- Folding
+        foldcolumn = 'auto', -- show a small column on the left of the window to indicate folds
+        -- foldmethod = 'indent', -- Folding by indent
+
+        -- Wrap
+        -- go to previous/next line with h,l,left arrow and right arrow
+        -- when cursor reaches end/beginning of line
+        whichwrap = "<>[]hl",
+        linebreak = true, -- Break whole word
+
+        -- Tabs, indent
+        copyindent = true, -- Copy whatever characters were used for indenting on the existing line
+        breakindent = true, -- Every wrapped line will continue visually indented
+        expandtab = true, -- Use spaces instead of tabs
+        preserveindent = true, -- Preserve indent structure as much as possible
+        shiftwidth = 4, -- Shift 4 spaces when tab
+        smartindent = true, -- Autoindent new lines
+        tabstop = 4, -- 1 tab == 4 spaces
+
+        -- Memory, CPU
+        history = 50, -- Remember N lines/commands in history
+        lazyredraw = true, -- Faster scrolling
+        synmaxcol = 240, -- Max column for syntax highlight
+
+        -- end opt
+    }
 }
 
 function setOptions(options)
-  for scope, table in pairs(options) do
-    for setting, value in pairs(table) do
-      vim[scope][setting] = value
+    for scope, table in pairs(options) do
+        for setting, value in pairs(table) do
+            vim[scope][setting] = value
+        end
     end
-  end
 end
+
 setOptions(options)

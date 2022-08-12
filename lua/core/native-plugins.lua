@@ -29,6 +29,18 @@ local disabled_built_ins = {
 }
 
 local g = vim.g
+
 for _, plugin in pairs(disabled_built_ins) do
    g["loaded_" .. plugin] = 1
+end
+
+local default_providers = {
+	--"node",
+	"perl",
+	"python3",
+	"ruby",
+}
+
+for _, provider in ipairs(default_providers) do
+	g["loaded_" .. provider .. "_provider"] = 0
 end
