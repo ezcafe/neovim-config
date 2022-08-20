@@ -49,6 +49,9 @@ return packer.startup(function(use)
 	-- Common utils
 	use 'nvim-lua/plenary.nvim'
 
+	-- Icons
+	use 'kyazdani42/nvim-web-devicons'
+
 	----------------------
   	-- UI --
   	----------------------
@@ -99,7 +102,12 @@ return packer.startup(function(use)
 	-- use {
 	-- 	'j-hui/fidget.nvim',
 	-- 	config = function() require 'plugins/fidget' end,
-	-- }	
+	-- }
+
+	use {
+		'nvim-lualine/lualine.nvim',
+		config = function() require 'plugins/lualine' end,
+	}
 
 	----------------------
   	-- LSP --
