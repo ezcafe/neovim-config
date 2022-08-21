@@ -43,7 +43,7 @@ local options = {
 
         -- Wrap
 		-- linebreak = true, -- Break whole word
-		cc = '80', -- Highlight column at 80
+		colorcolumn = '80', -- Highlight column at 80
         -- go to previous/next line with h,l,left arrow and right arrow
         -- when cursor reaches end/beginning of line
         whichwrap = "<>[]hl",
