@@ -28,6 +28,7 @@ local options = {
         cursorline = true, -- Highlight the text line of the cursor
         --fillchars = { eob = " " }, -- Disable `~` on nonexistent lines
         number = true, -- Show line number
+		relativenumber = true, -- Show relative line number
         showmatch = true, -- Highlight matching parenthesis
         signcolumn = 'yes', -- Always show the sign column
         splitbelow = true, -- Horizontal split to the bottom

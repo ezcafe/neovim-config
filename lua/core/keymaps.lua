@@ -141,7 +141,7 @@ local maps = {
 	["Sn"] = { "set nu!", desc = "Toggle line number" },
 	["Ss"] = { "set spell!", desc = "Enable or disable spell checking" },
 	["St"] = { "exec &bg=='light'? 'set bg=dark' : 'set bg=light'", desc = "Switch theme" },
-	["Su"] = { "exec &ls==0? 'set cc=80 laststatus=3 ruler showcmd showmode' : 'set cc= laststatus=0 noruler noshowcmd noshowmode'", desc = "Switch colorcolumn, status line, ..." },
+	["Su"] = { "exec &ls==0? 'set cc=80 ls=3 ruler sc smd' : 'set colorcolumn= laststatus=0 noruler noshowcmd noshowmode'", desc = "Switch colorcolumn, status line, ..." },
 
     -- end Command --
   },
