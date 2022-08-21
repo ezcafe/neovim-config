@@ -22,6 +22,7 @@ local maps = {
 
         -- Explorer
         ["<leader>e"] = { ":Lexplore<cr>", desc = "Open Explore" },
+		["<leader>ec"] = { ":Lexplore %:p:h<cr>", desc = "Open Explore in the directory of the current file" },
 
         -- Find
         ["<leader>fb"] = { ":Telescope buffers<cr>", desc = "Find Buffers" },
