@@ -66,7 +66,7 @@ nvim
 - `G`  go to end of file
 - `<count>G` go to the <count>th line
 
-#### [Oving around code block](https://neovim.io/doc/user/usr_29.html)
+#### [Moving around code block](https://neovim.io/doc/user/usr_29.html)
 
 - `%` go to the matching pair of (), {}, [] or if-else
 - `[#` jump to the start if-else
