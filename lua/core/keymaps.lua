@@ -4,8 +4,8 @@ local maps = {
     -- Standard Operations
     [";"] = { ":", desc = "Remap ; to :" },
     ["<leader>q"] = { "<cmd>close<cr>", desc = "Close window" },
-	-- ["<leader><esc>"] = { "<cmd>qa!<cr>", desc = "Force Quit" },
     ["<leader>w"] = { "<cmd>w<cr>", desc = "Save" },
+	["<C-q>"] = { "<cmd>qa<cr>", desc = "Force Quit" },
     --["<C-s>"] = { "<cmd>w<cr>", desc = "Save file" },
 
     -- Move around splits using Ctrl + {h,j,k,l}
