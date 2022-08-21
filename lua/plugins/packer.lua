@@ -44,7 +44,10 @@ return packer.startup(function(use)
     -- Improve startup time
     -- Call impatient plugin before all others to improve performance.
     -- Keep this line here.
-    use 'lewis6991/impatient.nvim'
+    use {
+		'lewis6991/impatient.nvim',
+		config = function() require 'plugins/impatient' end,
+	}
 
     -- Common utils
     use 'nvim-lua/plenary.nvim'
