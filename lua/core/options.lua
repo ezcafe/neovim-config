@@ -27,8 +27,6 @@ local options = {
         -- colorcolumn = '80',
         cursorline = true, -- Highlight the text line of the cursor
         --fillchars = { eob = " " }, -- Disable `~` on nonexistent lines
-		laststatus = 0, -- Hide status line
-		ruler = false, -- Hide the location and scroll position
         number = true, -- Show line number
         showmatch = true, -- Highlight matching parenthesis
         signcolumn = 'yes', -- Always show the sign column
@@ -37,13 +35,18 @@ local options = {
         syntax = 'on', -- Allow syntax highlighting
         termguicolors = true, -- Enable 24-bit RGB colors
 
+		-- Statusline
+		laststatus = 0, -- Hide status line
+		ruler = false, -- Hide the location and scroll position
+		statusline=' %{expand("%:p:h:t")}/%t%m %= %l,%c ',
+
         -- Folding
         foldcolumn = 'auto', -- show a small column on the left of the window to indicate folds
         -- foldmethod = 'indent', -- Folding by indent
 
         -- Wrap
 		-- linebreak = true, -- Break whole word
-		colorcolumn = '80', -- Highlight column at 80
+		-- colorcolumn = '80', -- Highlight column at 80
         -- go to previous/next line with h,l,left arrow and right arrow
         -- when cursor reaches end/beginning of line
         whichwrap = "<>[]hl",
