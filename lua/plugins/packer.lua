@@ -68,7 +68,7 @@ return packer.startup(function(use)
     }
 
 	-- Whichkey
-	use 'folke/which-key.nvim'
+	-- use 'folke/which-key.nvim'
 
     -- Install Telescope
     use 'nvim-telescope/telescope.nvim'
