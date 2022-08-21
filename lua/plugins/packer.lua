@@ -157,6 +157,16 @@ return packer.startup(function(use)
         config = function() require('plugins/git-conflict') end,
     }
 
+	---------------------
+    -- Utils --
+    ---------------------
+
+	-- Unit test - Not working
+	-- use {
+	-- 	"klen/nvim-test",
+	-- 	config = function() require('plugins/nvim-test') end,
+	-- }
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then

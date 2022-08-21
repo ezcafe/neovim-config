@@ -84,6 +84,15 @@ local maps = {
         -- Terminal
         ["<leader>t"] = { "<cmd>vsplit | terminal<cr>", desc = "Open Terminal" },
 
+		-- Unit test
+		-- ["<leader>us"] = { "<cmd>TestSuite<cr>", desc = "Run the whole test suite" },
+		-- ["<leader>uf"] = { "<cmd>TestFile<cr>", desc = "Run all tests for the current file" },
+		-- ["<leader>ue"] = { "<cmd>TestEdit<cr>", desc = "Edit tests for the current file" },
+		-- ["<leader>un"] = { "<cmd>TestNearest<cr>", desc = "Run the test nearest to the cursor" },
+		-- ["<leader>ul"] = { "<cmd>TestLast<cr>", desc = "Rerun the latest test" },
+		-- ["<leader>uv"] = { "<cmd>TestVisit<cr>", desc = "Open the last run test in the current buffer" },
+		-- ["<leader>ui"] = { "<cmd>TestInfo<cr>", desc = "Show an information about the plugin" },
+
         -- Utils
         ["<C-c>"] = { '"+y', desc = "Copy to clipboard" },
         ["<C-v>"] = { '"+p', desc = "Paste from clipboard" },
