@@ -68,7 +68,7 @@ local maps = {
         ["<leader>gR"] = { function() require("gitsigns").reset_hunk() end, desc = "Reset git hunk" },
 
         -- Comment
-        ["<leader>/"] = { function() require("Comment.api").toggle.linewise.current() end, desc = "Comment line" },
+        ["<leader>/"] = { function() require("Comment.api").toggle.linewise.current() end, desc = "Toggle comment line" },
 
         -- Search
         ["<Esc>"] = { "<cmd>noh<CR>", desc = "Clear highlights" },
@@ -138,8 +138,8 @@ local maps = {
         ["T"] = { "vsplit | terminal", desc = "Open Terminal" },
 
         ["Sc"] = { "set ignorecase!", desc = "Toggle Ignore/No Ignore case" },
-        ["Sn"] = { "set nu!", desc = "Toggle line number" },
-        ["Ss"] = { "set spell!", desc = "Enable or disable spell checking" },
+        -- ["Sn"] = { "set nu!", desc = "Toggle line number" },
+        -- ["Ss"] = { "set spell!", desc = "Enable or disable spell checking" },
         ["St"] = { "exec &bg=='light'? 'set bg=dark' : 'set bg=light'", desc = "Switch theme" },
         ["Su"] = { "exec &ls==0? 'set cc=80 ls=3 ruler sc smd' : 'set colorcolumn= laststatus=0 noruler noshowcmd noshowmode'",
             desc = "Switch colorcolumn, status line, ..." },

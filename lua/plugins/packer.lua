@@ -50,7 +50,7 @@ return packer.startup(function(use)
     use 'nvim-lua/plenary.nvim'
 
     -- Icons
-    use 'kyazdani42/nvim-web-devicons'
+    -- use 'kyazdani42/nvim-web-devicons'
 
     ----------------------
     -- UI --
@@ -66,6 +66,9 @@ return packer.startup(function(use)
         as = "catppuccin",
         config = function() require 'plugins/catppuccin' end,
     }
+
+	-- Whichkey
+	use 'folke/which-key.nvim'
 
     -- Install Telescope
     use 'nvim-telescope/telescope.nvim'
