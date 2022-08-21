@@ -27,6 +27,8 @@ local options = {
         -- colorcolumn = '80',
         cursorline = true, -- Highlight the text line of the cursor
         --fillchars = { eob = " " }, -- Disable `~` on nonexistent lines
+		laststatus = 0, -- Hide status line
+		ruler = false, -- Hide the location and scroll position
         number = true, -- Show line number
         showmatch = true, -- Highlight matching parenthesis
         signcolumn = 'yes', -- Always show the sign column
@@ -40,10 +42,12 @@ local options = {
         -- foldmethod = 'indent', -- Folding by indent
 
         -- Wrap
+		-- linebreak = true, -- Break whole word
+		cc = '80',
         -- go to previous/next line with h,l,left arrow and right arrow
         -- when cursor reaches end/beginning of line
         whichwrap = "<>[]hl",
-        linebreak = true, -- Break whole word
+		wrap = false,
 
         -- Tabs, indent
         copyindent = true, -- Copy whatever characters were used for indenting on the existing line

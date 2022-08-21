@@ -104,10 +104,10 @@ return packer.startup(function(use)
 	-- 	config = function() require 'plugins/fidget' end,
 	-- }
 
-	use {
-		'nvim-lualine/lualine.nvim',
-		config = function() require 'plugins/lualine' end,
-	}
+	-- use {
+	-- 	'nvim-lualine/lualine.nvim',
+	-- 	config = function() require 'plugins/lualine' end,
+	-- }
 
 	----------------------
   	-- LSP --

@@ -3,9 +3,8 @@ local maps = {
   n = {
     -- Standard Operations
     [";"] = { ":", desc = "Remap ; to :" },
-    ["<leader>c"] = { "<cmd>close<cr>", desc = "Close window" },
-    ["<leader>q"] = { "<cmd>q<cr>", desc = "Quit" },
-	["<leader><esc>"] = { "<cmd>qa!<cr>", desc = "Force Quit" },
+    ["<leader>q"] = { "<cmd>close<cr>", desc = "Close window" },
+	-- ["<leader><esc>"] = { "<cmd>qa!<cr>", desc = "Force Quit" },
     ["<leader>w"] = { "<cmd>w<cr>", desc = "Save" },
     --["<C-s>"] = { "<cmd>w<cr>", desc = "Save file" },
 
