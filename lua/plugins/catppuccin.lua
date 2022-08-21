@@ -41,6 +41,7 @@ catppuccin.setup({
         telescope = true,
         treesitter = true,
         ts_rainbow = true,
+		which_key = true,
         -- Diable plugins
         aerial = false,
         barbar = false,
@@ -79,7 +80,6 @@ catppuccin.setup({
         symbols_outline = false,
         vim_sneak = false,
         vimwiki = false,
-        which_key = false,
     },
 })
 
