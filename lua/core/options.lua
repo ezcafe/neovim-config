@@ -39,7 +39,7 @@ local options = {
         -- Statusline
         laststatus = 0, -- Hide status line
         ruler = false, -- Hide the location and scroll position
-        statusline = ' %{expand("%:p:h:t")}/%t%m %= %l,%c ',
+        statusline = '%{expand("%:p:h:t")}/%t%m %= %l,%c',
 
         -- Folding
         foldcolumn = 'auto', -- show a small column on the left of the window to indicate folds
