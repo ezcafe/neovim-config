@@ -67,6 +67,14 @@ local maps = {
         ["<leader>gU"] = { function() require("gitsigns").undo_stage_hunk() end, desc = "Unstage git hunk" },
         ["<leader>gR"] = { function() require("gitsigns").reset_hunk() end, desc = "Reset git hunk" },
 
+		-- git-conflict
+		["<leader>co"] = { '<Plug>(git-conflict-ours)', desc = "Conflict: Choose Ours" },
+		["<leader>ct"] = { '<Plug>(git-conflict-theirs)', desc = "Conflict: Choose Theirs" },
+		["<leader>cb"] = { '<Plug>(git-conflict-both)', desc = "Conflict: Choose Both" },
+		["<leader>c0"] = { '<Plug>(git-conflict-none)', desc = "Conflict: Choose None" },
+		["<leader>ck"] = { '<Plug>(git-conflict-prev-conflict)', desc = "Conflict: Next" },
+		["<leader>cj"] = { '<Plug>(git-conflict-next-conflict)', desc = "Conflict: Previous" },
+
         -- Comment
         ["<leader>/"] = { function() require("Comment.api").toggle.linewise.current() end, desc = "Toggle comment line" },
 

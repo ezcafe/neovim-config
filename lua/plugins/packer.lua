@@ -148,6 +148,11 @@ return packer.startup(function(use)
         event = "BufEnter",
         config = function() require('gitsigns').setup {} end,
     }
+	use {
+        'akinsho/git-conflict.nvim',
+        event = "BufEnter",
+        config = function() require('plugins/git-conflict') end,
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
