@@ -2,16 +2,16 @@
 local fn = vim.fn
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
-  PACKER_BOOTSTRAP = fn.system {
-    "git",
-    "clone",
-    "--depth",
-    "1",
-    "https://github.com/wbthomason/packer.nvim",
-    install_path,
-  }
-  print "Installing packer close and reopen Neovim..."
-  vim.cmd [[packadd packer.nvim]]
+    PACKER_BOOTSTRAP = fn.system {
+        "git",
+        "clone",
+        "--depth",
+        "1",
+        "https://github.com/wbthomason/packer.nvim",
+        install_path,
+    }
+    print "Installing packer close and reopen Neovim..."
+    vim.cmd [[packadd packer.nvim]]
 end
 
 -- Use a protected call so we don't error out on first use
@@ -22,62 +22,62 @@ end
 
 -- Have packer use a popup window
 packer.init {
-	display = {
-	  	open_fn = function()
-			return require("packer.util").float { border = "rounded" }
-	  	end,
-	},
+    display = {
+        open_fn = function()
+            return require("packer.util").float { border = "rounded" }
+        end,
+    },
 }
 
 -- Install your plugins here
 return packer.startup(function(use)
     ---------------------
-  	-- Package Manager --
-  	---------------------
-	
+    -- Package Manager --
+    ---------------------
+
     use 'wbthomason/packer.nvim'
 
-	----------------------
-  	-- Dependencies --
-  	----------------------
+    ----------------------
+    -- Dependencies --
+    ----------------------
 
-	-- Improve startup time
-	-- Call impatient plugin before all others to improve performance. 
-	-- Keep this line here.
-	use 'lewis6991/impatient.nvim'
+    -- Improve startup time
+    -- Call impatient plugin before all others to improve performance.
+    -- Keep this line here.
+    use 'lewis6991/impatient.nvim'
 
-	-- Common utils
-	use 'nvim-lua/plenary.nvim'
+    -- Common utils
+    use 'nvim-lua/plenary.nvim'
 
-	-- Icons
-	use 'kyazdani42/nvim-web-devicons'
+    -- Icons
+    use 'kyazdani42/nvim-web-devicons'
 
-	----------------------
-  	-- UI --
-  	----------------------
+    ----------------------
+    -- UI --
+    ----------------------
 
-	-- Colorschemes
+    -- Colorschemes
     -- use {
     --     'joshdick/onedark.vim',
     --     config = function() require 'plugins/colorscheme' end
     -- }
-	use {
-		"catppuccin/nvim",
-		as = "catppuccin",
+    use {
+        "catppuccin/nvim",
+        as = "catppuccin",
         config = function() require 'plugins/catppuccin' end,
-	}
+    }
 
     -- Install Telescope
-    use 'nvim-telescope/telescope.nvim'    
+    use 'nvim-telescope/telescope.nvim'
 
     -- Syntax highlighting
     use {
         'nvim-treesitter/nvim-treesitter',
-		-- event = { "BufRead", "BufNewFile" }, -- this config has issue with nvim-ts-rainbow
+        -- event = { "BufRead", "BufNewFile" }, -- this config has issue with nvim-ts-rainbow
         config = function() require 'plugins/nvim-treesitter' end,
         run = function() require('nvim-treesitter.install').update({ with_sync = true }) end
     }
-	
+
     -- Context based commenting
     use { 'JoosepAlviste/nvim-ts-context-commentstring', after = 'nvim-treesitter' }
     use {
@@ -85,33 +85,33 @@ return packer.startup(function(use)
         config = function() require 'plugins/comment' end,
     }
 
-	-- Parenthesis highlighting
+    -- Parenthesis highlighting
     use { 'p00f/nvim-ts-rainbow', after = 'nvim-treesitter' }
 
     -- Indent line
     use {
         'lukas-reineke/indent-blankline.nvim',
-		event = "BufRead",
+        event = "BufRead",
         config = function() require 'plugins/indent-blankline' end,
     }
 
-	-- Highlighting other uses of the word under the cursor
-	use 'RRethy/vim-illuminate'
+    -- Highlighting other uses of the word under the cursor
+    use 'RRethy/vim-illuminate'
 
-	-- Loading status
-	-- use {
-	-- 	'j-hui/fidget.nvim',
-	-- 	config = function() require 'plugins/fidget' end,
-	-- }
+    -- Loading status
+    -- use {
+    -- 	'j-hui/fidget.nvim',
+    -- 	config = function() require 'plugins/fidget' end,
+    -- }
 
-	-- use {
-	-- 	'nvim-lualine/lualine.nvim',
-	-- 	config = function() require 'plugins/lualine' end,
-	-- }
+    -- use {
+    -- 	'nvim-lualine/lualine.nvim',
+    -- 	config = function() require 'plugins/lualine' end,
+    -- }
 
-	----------------------
-  	-- LSP --
-  	----------------------
+    ----------------------
+    -- LSP --
+    ----------------------
 
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -135,20 +135,20 @@ return packer.startup(function(use)
         config = function() require 'plugins/lsp-zero' end
     }
 
-	---------------------
-  	-- Git --
-  	---------------------
+    ---------------------
+    -- Git --
+    ---------------------
 
     -- Git integration
     use {
         'lewis6991/gitsigns.nvim',
-		event = "BufEnter",
+        event = "BufEnter",
         config = function() require('gitsigns').setup {} end,
     }
 
-	-- Automatically set up your configuration after cloning packer.nvim
-	-- Put this at the end after all plugins
-	if PACKER_BOOTSTRAP then
-		require("packer").sync()
-	end
+    -- Automatically set up your configuration after cloning packer.nvim
+    -- Put this at the end after all plugins
+    if PACKER_BOOTSTRAP then
+        require("packer").sync()
+    end
 end)

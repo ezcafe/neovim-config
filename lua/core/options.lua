@@ -17,18 +17,18 @@ local options = {
     opt = {
         -- General
         errorbells = true,
-		mouse = 'a', -- Enable mouse support for all modes
-		-- shada = "'100,<50,f50,n"..backup_dir.."/shada/shada",
+        mouse = 'a', -- Enable mouse support for all modes
+        -- shada = "'100,<50,f50,n"..backup_dir.."/shada/shada",
         timeoutlen = 300, -- Time in milliseconds to wait for a mapped sequence to complete.
         updatetime = 300, -- Length of time to wait before triggering the plugin
-		visualbell = true,
+        visualbell = true,
 
         -- Neovim UI
         -- colorcolumn = '80',
         cursorline = true, -- Highlight the text line of the cursor
         --fillchars = { eob = " " }, -- Disable `~` on nonexistent lines
         number = true, -- Show line number
-		relativenumber = true, -- Show relative line number
+        relativenumber = true, -- Show relative line number
         showmatch = true, -- Highlight matching parenthesis
         signcolumn = 'yes', -- Always show the sign column
         splitbelow = true, -- Horizontal split to the bottom
@@ -36,22 +36,22 @@ local options = {
         syntax = 'on', -- Allow syntax highlighting
         termguicolors = true, -- Enable 24-bit RGB colors
 
-		-- Statusline
-		laststatus = 0, -- Hide status line
-		ruler = false, -- Hide the location and scroll position
-		statusline=' %{expand("%:p:h:t")}/%t%m %= %l,%c ',
+        -- Statusline
+        laststatus = 0, -- Hide status line
+        ruler = false, -- Hide the location and scroll position
+        statusline = ' %{expand("%:p:h:t")}/%t%m %= %l,%c ',
 
         -- Folding
         foldcolumn = 'auto', -- show a small column on the left of the window to indicate folds
         -- foldmethod = 'indent', -- Folding by indent
 
         -- Wrap
-		-- linebreak = true, -- Break whole word
-		-- colorcolumn = '80', -- Highlight column at 80
+        -- linebreak = true, -- Break whole word
+        -- colorcolumn = '80', -- Highlight column at 80
         -- go to previous/next line with h,l,left arrow and right arrow
         -- when cursor reaches end/beginning of line
         whichwrap = "<>[]hl",
-		wrap = false,
+        wrap = false,
 
         -- Tabs, indent
         copyindent = true, -- Copy whatever characters were used for indenting on the existing line
