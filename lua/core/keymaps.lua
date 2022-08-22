@@ -29,6 +29,7 @@ local maps = {
         --["<leader>fc"] = { ":Telescope commands<cr>", desc = "Find Commands" },
         --["<leader>fch"] = { ":Telescope command_history<cr>", desc = "Find Commands History" },
         ["<leader>ff"] = { ":Telescope find_files<cr>", desc = "Find Files" },
+        ["<leader>ffh"] = { ":Telescope find_files hidden=true<cr>", desc = "Find Files" },
         --["<leader>fj"] = { ":Telescope jumplist<cr>", desc = "Find Jump List" },
         --["<leader>fk"] = { ":Telescope keymaps<cr>", desc = "Find Keymaps" },
         --["<leader>fm"] = { ":Telescope marks<cr>", desc = "Find Marks" },

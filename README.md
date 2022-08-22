@@ -51,8 +51,8 @@ nvim
 - `M` go to middle of viewport
 - `L` go to bottom of viewport
 
-- `Ctrl + e` scroll up 1 line
-- `Ctrl + y` scroll down 1 line
+- `Ctrl + e` scroll down 1 line
+- `Ctrl + y` scroll up 1 line
 - `Ctrl + u` scroll up half of viewport
 - `Ctrl + d` scroll down half of viewport
 - `Ctrl + b` scroll up to previous (backwards) viewport
