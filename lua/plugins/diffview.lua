@@ -41,7 +41,8 @@ require("diffview").setup({ -- See ':h diffview-config-hooks'
             --["-"]             = actions.toggle_stage_entry, -- Stage / unstage the selected entry.
 			["a"]             = actions.toggle_stage_entry, -- Stage / unstage the selected entry.
             ["A"]             = actions.stage_all,          -- Stage all entries.
-            ["U"]             = actions.unstage_all,        -- Unstage all entries.
+            ["u"]             = actions.toggle_stage_entry, -- Stage / unstage the selected entry.
+			["U"]             = actions.unstage_all,        -- Unstage all entries.
             --["X"]             = actions.restore_entry,      -- Restore entry to the state on the left side.
 			["r"]             = actions.restore_entry,      -- Restore entry to the state on the left side.
             --["R"]             = actions.refresh_files,      -- Update stats and entries in the file list.
