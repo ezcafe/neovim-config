@@ -151,6 +151,10 @@ return packer.startup(function(use)
         event = "BufEnter",
         config = function() require('gitsigns').setup {} end,
     }
+    use {
+		'sindrets/diffview.nvim',
+		config = function() require 'plugins/diffview' end
+	}
 	use {
         'akinsho/git-conflict.nvim',
         event = "BufEnter",

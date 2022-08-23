@@ -4,6 +4,7 @@ local maps = {
         -- Standard Operations
         [";"] = { ":", desc = "Remap ; to :" },
         ["<leader>q"] = { "<cmd>close<cr>", desc = "Close window" },
+		["<leader>c"] = { "<cmd>tabclose<cr>", desc = "Close tab" },
         ["<leader>w"] = { "<cmd>w<cr>", desc = "Save" },
         ["<C-q>"] = { "<cmd>qa<cr>", desc = "Force Quit" },
         --["<C-s>"] = { "<cmd>w<cr>", desc = "Save file" },
@@ -22,7 +23,7 @@ local maps = {
 
         -- Explorer
         ["<leader>e"] = { ":Lexplore<cr>", desc = "Open Explore" },
-		["<leader>ec"] = { ":Lexplore %:p:h<cr>", desc = "Open Explore in the directory of the current file" },
+        ["<leader>ec"] = { ":Lexplore %:p:h<cr>", desc = "Open Explore in the directory of the current file" },
 
         -- Find
         ["<leader>fb"] = { ":Telescope buffers<cr>", desc = "Find Buffers" },
@@ -69,13 +70,13 @@ local maps = {
         ["<leader>gU"] = { function() require("gitsigns").undo_stage_hunk() end, desc = "Unstage git hunk" },
         ["<leader>gR"] = { function() require("gitsigns").reset_hunk() end, desc = "Reset git hunk" },
 
-		-- git-conflict
-		["<leader>co"] = { '<Plug>(git-conflict-ours)', desc = "Conflict: Choose Ours" },
-		["<leader>ct"] = { '<Plug>(git-conflict-theirs)', desc = "Conflict: Choose Theirs" },
-		["<leader>cb"] = { '<Plug>(git-conflict-both)', desc = "Conflict: Choose Both" },
-		["<leader>c0"] = { '<Plug>(git-conflict-none)', desc = "Conflict: Choose None" },
-		["<leader>ck"] = { '<Plug>(git-conflict-prev-conflict)', desc = "Conflict: Next" },
-		["<leader>cj"] = { '<Plug>(git-conflict-next-conflict)', desc = "Conflict: Previous" },
+        -- git-conflict
+        ["<leader>co"] = { '<Plug>(git-conflict-ours)', desc = "Conflict: Choose Ours" },
+        ["<leader>ct"] = { '<Plug>(git-conflict-theirs)', desc = "Conflict: Choose Theirs" },
+        ["<leader>cb"] = { '<Plug>(git-conflict-both)', desc = "Conflict: Choose Both" },
+        ["<leader>c0"] = { '<Plug>(git-conflict-none)', desc = "Conflict: Choose None" },
+        ["<leader>ck"] = { '<Plug>(git-conflict-prev-conflict)', desc = "Conflict: Next" },
+        ["<leader>cj"] = { '<Plug>(git-conflict-next-conflict)', desc = "Conflict: Previous" },
 
         -- Comment
         ["<leader>/"] = { function() require("Comment.api").toggle.linewise.current() end, desc = "Toggle comment line" },
@@ -86,14 +87,14 @@ local maps = {
         -- Terminal
         ["<leader>t"] = { "<cmd>vsplit | terminal<cr>", desc = "Open Terminal" },
 
-		-- Unit test
-		-- ["<leader>us"] = { "<cmd>TestSuite<cr>", desc = "Run the whole test suite" },
-		-- ["<leader>uf"] = { "<cmd>TestFile<cr>", desc = "Run all tests for the current file" },
-		-- ["<leader>ue"] = { "<cmd>TestEdit<cr>", desc = "Edit tests for the current file" },
-		-- ["<leader>un"] = { "<cmd>TestNearest<cr>", desc = "Run the test nearest to the cursor" },
-		-- ["<leader>ul"] = { "<cmd>TestLast<cr>", desc = "Rerun the latest test" },
-		-- ["<leader>uv"] = { "<cmd>TestVisit<cr>", desc = "Open the last run test in the current buffer" },
-		-- ["<leader>ui"] = { "<cmd>TestInfo<cr>", desc = "Show an information about the plugin" },
+        -- Unit test
+        -- ["<leader>us"] = { "<cmd>TestSuite<cr>", desc = "Run the whole test suite" },
+        -- ["<leader>uf"] = { "<cmd>TestFile<cr>", desc = "Run all tests for the current file" },
+        -- ["<leader>ue"] = { "<cmd>TestEdit<cr>", desc = "Edit tests for the current file" },
+        -- ["<leader>un"] = { "<cmd>TestNearest<cr>", desc = "Run the test nearest to the cursor" },
+        -- ["<leader>ul"] = { "<cmd>TestLast<cr>", desc = "Rerun the latest test" },
+        -- ["<leader>uv"] = { "<cmd>TestVisit<cr>", desc = "Open the last run test in the current buffer" },
+        -- ["<leader>ui"] = { "<cmd>TestInfo<cr>", desc = "Show an information about the plugin" },
 
         -- Utils
         ["<C-c>"] = { '"+y', desc = "Copy to clipboard" },
@@ -155,6 +156,12 @@ local maps = {
     c = {
         ["Ps"] = { "PackerSync", desc = "Packer Sync" },
         ["T"] = { "vsplit | terminal", desc = "Open Terminal" },
+
+		-- diffview
+        ["Gs"] = { "DiffviewOpen", desc = "Git status" },
+		["GC"] = { "DiffviewClose", desc = "Git close" },
+		["Gc"] = { "DiffviewFileHistory", desc = "Git commits" },
+		["Gf"] = { "DiffviewFileHistory %", desc = "Git file history" },
 
         ["Sc"] = { "set ignorecase!", desc = "Toggle Ignore/No Ignore case" },
         -- ["Sn"] = { "set nu!", desc = "Toggle line number" },
