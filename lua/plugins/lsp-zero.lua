@@ -58,15 +58,16 @@ lsp.on_attach(function(client, bufnr)
 
     -- LSP actions
     bind('n', 'gD', buf.declaration, bufopts)
-    bind('n', 'gd', buf.definition, bufopts)
-    bind('n', 'gh', buf.hover, bufopts)
-    bind('n', 'gi', buf.implementation, bufopts)
+    bind('n', 'gd', buf.definition, bufopts) -- jumps to the definition of the symbol under the cursor
+    bind('n', 'gh', buf.hover, bufopts) -- information about the symbol under the cursos in a floating window
+    bind('n', 'gi', buf.implementation, bufopts) -- lists all the implementations for the symbol under the cursor in the quickfix window
     bind('n', 'gs', buf.signature_help, bufopts)
     bind('n', 'gt', buf.type_definition, bufopts)
+	--bind("n", "<localleader>fn", ":lua vim.lsp.util.rename()<CR>", {}) --> renaname old_fname to new_fname
     bind('n', '<localleader>rn', buf.rename, bufopts)
-    bind('n', 'ga', buf.code_action, bufopts)
-    bind('n', 'gr', buf.references, bufopts)
-    bind('n', '<localleader>fm', buf.formatting, bufopts)
+    bind('n', '<localleader>ca', buf.code_action, bufopts) -- selects a code action available at the current cursor position
+    bind('n', 'gr', buf.references, bufopts) -- lists all the references to the symbl under the cursor in the quickfix window
+    bind('n', '<localleader>fm', buf.formatting, bufopts) -- formats the current buffer
 
     --bind('n', '<space>wa', buf.add_workspace_folder, bufopts)
     --bind('n', '<space>wr', buf.remove_workspace_folder, bufopts)
