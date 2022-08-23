@@ -5,6 +5,7 @@
 local options = {
     g = {
         mapleader = " ", -- set leader key
+		maplocalleader = ",", -- set leader key
 
         -- Explorer
         netrw_banner = 0, -- Hide the banner
