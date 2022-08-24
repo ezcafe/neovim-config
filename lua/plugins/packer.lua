@@ -175,6 +175,9 @@ return packer.startup(function(use)
 	-- 	config = function() require('plugins/nvim-test') end,
 	-- }
 
+	-- Terminal
+	use 'numToStr/FTerm.nvim'
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then

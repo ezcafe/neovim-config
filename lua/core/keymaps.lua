@@ -87,7 +87,8 @@ local maps = {
         ["<Esc>"] = { "<cmd>noh<CR>", desc = "Clear highlights" },
 
         -- Terminal
-        ["<leader>t"] = { "<cmd>vsplit | terminal<cr>", desc = "Open Terminal" },
+        -- ["<leader>t"] = { "<cmd>vsplit | terminal<cr>", desc = "Open Terminal" },
+		["<leader>t"] = { "<cmd>lua require('FTerm').toggle()<cr>", desc = "Terminal Toggle" },
 
         -- Unit test
         -- ["<leader>us"] = { "<cmd>TestSuite<cr>", desc = "Run the whole test suite" },
@@ -151,13 +152,23 @@ local maps = {
     t = {
         ["<Esc>"] = { "<C-\\><C-n>", desc = "Escape terminal mode" },
 
+		-- Terminal
+        -- ["<leader>t"] = { "<cmd>vsplit | terminal<cr>", desc = "Open Terminal" },
+		["<leader>t"] = { "<cmd>lua require('FTerm').toggle()<cr>", desc = "Terminal Toggle" },
+
         -- end Term --
     },
 
     -- Command --
     c = {
         ["Ps"] = { "PackerSync", desc = "Packer Sync" },
-        ["T"] = { "vsplit | terminal", desc = "Open Terminal" },
+        -- ["T"] = { "vsplit | terminal", desc = "Open Terminal" },
+		["T"] = { "lua require('FTerm').toggle()", desc = "Terminal Toggle" },
+		["Tc"] = { "lua require('FTerm').exit()", desc = "Terminal Exit" },
+		["Tyc"] = { "lua require('FTerm').run({'yarn', 'commit'})", desc = "Terminal Run yarn commit" },
+		["Tyi"] = { "lua require('FTerm').run({'yarn', 'install'})", desc = "Terminal Run yarn install" },
+		["Tys"] = { "lua require('FTerm').run({'yarn', 'start'})", desc = "Terminal Run yarn start" },
+		["Tyt"] = { "lua require('FTerm').run({'yarn', 'test', vim.api.nvim_buf_get_name(0)})", desc = "Terminal Run yarn test" },
 
 		-- diffview
         ["Gs"] = { "DiffviewOpen", desc = "Git status" },
