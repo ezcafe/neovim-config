@@ -62,12 +62,16 @@ return packer.startup(function(use)
     -- Colorschemes
     -- use {
     --     'joshdick/onedark.vim',
-    --     config = function() require 'plugins/colorscheme' end
+    --     config = function() require 'plugins/theme-onedark' end
     -- }
-    use {
-        "catppuccin/nvim",
-        as = "catppuccin",
-        config = function() require 'plugins/catppuccin' end,
+    -- use {
+    --     "catppuccin/nvim",
+    --     as = "catppuccin",
+    --     config = function() require 'plugins/theme-catppuccin' end,
+    -- }
+	use {
+        "olimorris/onedarkpro.nvim",
+        config = function() require 'plugins/theme-onedarkpro' end,
     }
 
 	-- Whichkey

@@ -1,3 +1,5 @@
+require 'core/utils/themes'
+
 local maps = {
     -- Normal --
     n = {
@@ -166,7 +168,8 @@ local maps = {
         ["Sc"] = { "set ignorecase!", desc = "Toggle Ignore/No Ignore case" },
         -- ["Sn"] = { "set nu!", desc = "Toggle line number" },
         -- ["Ss"] = { "set spell!", desc = "Enable or disable spell checking" },
-        ["St"] = { "exec &bg=='light'? 'set bg=dark' : 'set bg=light'", desc = "Switch theme" },
+        --["St"] = { "exec &bg=='light'? 'set bg=dark' : 'set bg=light'", desc = "Switch theme" },
+		["St"] = { "lua ToggleTheme()", desc = "Switch theme" },
         ["Su"] = { "exec &ls==0? 'set cc=80 ls=3 ruler sc smd' : 'set colorcolumn= laststatus=0 noruler noshowcmd noshowmode'",
             desc = "Switch colorcolumn, status line, ..." },
 
