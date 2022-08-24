@@ -6,7 +6,7 @@ local maps = {
         -- Standard Operations
         [";"] = { ":", desc = "Remap ; to :" },
         ["<leader>q"] = { "<cmd>close<cr>", desc = "Close window" },
-		["<leader>c"] = { "<cmd>tabclose<cr>", desc = "Close tab" },
+        ["<leader>c"] = { "<cmd>tabclose<cr>", desc = "Close tab" },
         ["<leader>w"] = { "<cmd>w<cr>", desc = "Save" },
         ["<C-q>"] = { "<cmd>qa<cr>", desc = "Force Quit" },
         --["<C-s>"] = { "<cmd>w<cr>", desc = "Save file" },
@@ -88,7 +88,7 @@ local maps = {
 
         -- Terminal
         -- ["<leader>t"] = { "<cmd>vsplit | terminal<cr>", desc = "Open Terminal" },
-		["<leader>t"] = { "<cmd>lua require('FTerm').toggle()<cr>", desc = "Terminal Toggle" },
+        ["<leader>t"] = { "<cmd>lua require('FTerm').toggle()<cr>", desc = "Terminal Toggle" },
 
         -- Unit test
         -- ["<leader>us"] = { "<cmd>TestSuite<cr>", desc = "Run the whole test suite" },
@@ -152,9 +152,9 @@ local maps = {
     t = {
         ["<Esc>"] = { "<C-\\><C-n>", desc = "Escape terminal mode" },
 
-		-- Terminal
+        -- Terminal
         -- ["<leader>t"] = { "<cmd>vsplit | terminal<cr>", desc = "Open Terminal" },
-		["<leader>t"] = { "<cmd>lua require('FTerm').toggle()<cr>", desc = "Terminal Toggle" },
+        ["<leader>t"] = { "<cmd>lua require('FTerm').toggle()<cr>", desc = "Terminal Toggle" },
 
         -- end Term --
     },
@@ -163,24 +163,25 @@ local maps = {
     c = {
         ["Ps"] = { "PackerSync", desc = "Packer Sync" },
         -- ["T"] = { "vsplit | terminal", desc = "Open Terminal" },
-		["T"] = { "lua require('FTerm').toggle()", desc = "Terminal Toggle" },
-		["Tc"] = { "lua require('FTerm').exit()", desc = "Terminal Exit" },
-		["Tyc"] = { "lua require('FTerm').run({'yarn', 'commit'})", desc = "Terminal Run yarn commit" },
-		["Tyi"] = { "lua require('FTerm').run({'yarn', 'install'})", desc = "Terminal Run yarn install" },
-		["Tys"] = { "lua require('FTerm').run({'yarn', 'start'})", desc = "Terminal Run yarn start" },
-		["Tyt"] = { "lua require('FTerm').run({'yarn', 'test', vim.api.nvim_buf_get_name(0)})", desc = "Terminal Run yarn test" },
+        ["T"] = { "lua require('FTerm').toggle()", desc = "Terminal Toggle" },
+        ["Tc"] = { "lua require('FTerm').exit()", desc = "Terminal Exit" },
+        ["Tyc"] = { "lua require('FTerm').run({'yarn', 'commit'})", desc = "Terminal Run yarn commit" },
+        ["Tyi"] = { "lua require('FTerm').run({'yarn', 'install'})", desc = "Terminal Run yarn install" },
+        ["Tys"] = { "lua require('FTerm').run({'yarn', 'start'})", desc = "Terminal Run yarn start" },
+        ["Tyt"] = { "lua require('FTerm').run({'yarn', 'test', vim.api.nvim_buf_get_name(0)})",
+            desc = "Terminal Run yarn test" },
 
-		-- diffview
+        -- diffview
         ["Gs"] = { "DiffviewOpen", desc = "Git status" },
-		["GC"] = { "DiffviewClose", desc = "Git close" },
-		["Gc"] = { "DiffviewFileHistory", desc = "Git commits" },
-		["Gf"] = { "DiffviewFileHistory %", desc = "Git file history" },
+        ["GC"] = { "DiffviewClose", desc = "Git close" },
+        ["Gc"] = { "DiffviewFileHistory", desc = "Git commits" },
+        ["Gf"] = { "DiffviewFileHistory %", desc = "Git file history" },
 
         ["Sc"] = { "set ignorecase!", desc = "Toggle Ignore/No Ignore case" },
         -- ["Sn"] = { "set nu!", desc = "Toggle line number" },
         -- ["Ss"] = { "set spell!", desc = "Enable or disable spell checking" },
         --["St"] = { "exec &bg=='light'? 'set bg=dark' : 'set bg=light'", desc = "Switch theme" },
-		["St"] = { "lua ToggleTheme()", desc = "Switch theme" },
+        ["St"] = { "lua ToggleTheme()", desc = "Switch theme" },
         ["Su"] = { "exec &ls==0? 'set cc=80 ls=3 ruler sc smd' : 'set colorcolumn= laststatus=0 noruler noshowcmd noshowmode'",
             desc = "Switch colorcolumn, status line, ..." },
 

@@ -45,9 +45,9 @@ return packer.startup(function(use)
     -- Call impatient plugin before all others to improve performance.
     -- Keep this line here.
     use {
-		'lewis6991/impatient.nvim',
-		config = function() require 'plugins/impatient' end,
-	}
+        'lewis6991/impatient.nvim',
+        config = function() require 'plugins/impatient' end,
+    }
 
     -- Common utils
     use 'nvim-lua/plenary.nvim'
@@ -69,13 +69,13 @@ return packer.startup(function(use)
     --     as = "catppuccin",
     --     config = function() require 'plugins/theme-catppuccin' end,
     -- }
-	use {
+    use {
         "olimorris/onedarkpro.nvim",
         config = function() require 'plugins/theme-onedarkpro' end,
     }
 
-	-- Whichkey
-	-- use 'folke/which-key.nvim'
+    -- Whichkey
+    -- use 'folke/which-key.nvim'
 
     -- Install Telescope
     use 'nvim-telescope/telescope.nvim'
@@ -156,27 +156,27 @@ return packer.startup(function(use)
         config = function() require('gitsigns').setup {} end,
     }
     use {
-		'sindrets/diffview.nvim',
-		config = function() require 'plugins/diffview' end
-	}
-	use {
+        'sindrets/diffview.nvim',
+        config = function() require 'plugins/diffview' end
+    }
+    use {
         'akinsho/git-conflict.nvim',
         event = "BufEnter",
         config = function() require('plugins/git-conflict') end,
     }
 
-	---------------------
+    ---------------------
     -- Utils --
     ---------------------
 
-	-- Unit test - Not working
-	-- use {
-	-- 	"klen/nvim-test",
-	-- 	config = function() require('plugins/nvim-test') end,
-	-- }
+    -- Unit test - Not working
+    -- use {
+    -- 	"klen/nvim-test",
+    -- 	config = function() require('plugins/nvim-test') end,
+    -- }
 
-	-- Terminal
-	use 'numToStr/FTerm.nvim'
+    -- Terminal
+    use 'numToStr/FTerm.nvim'
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
