@@ -25,6 +25,7 @@ local options = {
         visualbell = true,
 
         -- Neovim UI
+		background = 'dark',
         -- colorcolumn = '80',
         cursorline = true, -- Highlight the text line of the cursor
         --fillchars = { eob = " " }, -- Disable `~` on nonexistent lines

@@ -8,12 +8,13 @@ end
 
 require("onedarkpro").setup({
 	dark_theme = "onedark_dark", -- The default dark theme: onedark, onedark_vivid, onedark_dark
+	light_theme = "onelight", -- The default light theme
 	plugins = {
 		-- disable all of the plugins
 		all = false,
 		
 		-- https://github.com/olimorris/onedarkpro.nvim#electric_plug-supported-plugins
-		gitsigns_nvim = true,
+		gitsigns = true,
 		indentline = true,
   		native_lsp = true,
 		nvim_cmp = true,
