@@ -5,7 +5,8 @@ local maps = {
     n = {
         -- Standard Operations
         [";"] = { ":", desc = "Remap ; to :" },
-        ["<leader>q"] = { "<cmd>close | tabclose<cr>", desc = "Close window" },
+        ["<leader>q"] = { "<cmd>close<cr>", desc = "Close window" },
+        ["<leader>c"] = { "<cmd>tabclose<cr>", desc = "Close tab" },
         ["<leader>w"] = { "<cmd>w<cr>", desc = "Save" },
         ["<C-q>"] = { "<cmd>qa<cr>", desc = "Force Quit" },
         --["<C-s>"] = { "<cmd>w<cr>", desc = "Save file" },
