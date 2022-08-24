@@ -176,7 +176,10 @@ return packer.startup(function(use)
     -- }
 
     -- Terminal
-    use 'numToStr/FTerm.nvim'
+    use {
+		'numToStr/FTerm.nvim',
+		config = function() require('plugins/FTerm') end,
+	}
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
